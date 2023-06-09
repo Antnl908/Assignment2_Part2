@@ -25,9 +25,11 @@ class Assignment2P2
             threads[i].Start();
         }
 
-        while (isRunning)
-        {
+        //while (isRunning)
+        //{
 
-        }
+        //}
+
+        seatManager.printStatus();
     }
 }

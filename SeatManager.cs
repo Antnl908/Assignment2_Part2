@@ -62,9 +62,13 @@ namespace Assignment2_Part2
             return null;
         }
 
-        public string printStatus()
+        public void printStatus()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            for(int i = 0; i < seats.Count; i++)
+            {
+                Console.WriteLine($"Seat:{seats[i].Id} is booked by Client: {seats[i].ClientId}");
+            }
         }
 
         public int getNumberBooked()
