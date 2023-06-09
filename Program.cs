@@ -25,10 +25,11 @@ class Assignment2P2
             threads[i].Start();
         }
 
-        //while (isRunning)
-        //{
+        while (seatManager.getNumberBooked() < numOfSeats)
+        {
 
-        //}
+        }
+        //Thread.Sleep(1000);
 
         seatManager.printStatus();
     }
