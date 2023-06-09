@@ -25,7 +25,7 @@ class Assignment2P2
             threads[i].Start();
         }
 
-        while (seatManager.getNumberBooked() < numOfSeats)
+        while (seatManager.seatIsAvailable())
         {
 
         }
