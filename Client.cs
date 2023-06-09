@@ -14,9 +14,11 @@ namespace Assignment2_Part2
 
         public Client(SeatManager seatManager, int id)
         {
-            this.id = id;
+            this.Id = id;
             this.seatManager = seatManager;
         }
+
+        public int Id { get => id; set => id = value; }
 
         public void Run()
         {

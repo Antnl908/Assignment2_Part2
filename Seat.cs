@@ -23,6 +23,7 @@ namespace Assignment2_Part2
         {
             this.clientId = clientId;
             CurrentStatus = Status.occupied;
+            Console.WriteLine("Client " + clientId + " books seat " + id);
         }
 
         public Status CurrentStatus
