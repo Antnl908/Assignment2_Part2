@@ -45,6 +45,7 @@ namespace Assignment2_Part2
                 if (seat.IsAvailable)
                 {
                     seat.Book(client.Id);
+                    Thread.Sleep(100);
                     return true;
                 }
             }
