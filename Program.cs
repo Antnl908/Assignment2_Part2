@@ -10,8 +10,8 @@ class Assignment2P2
     {
         bool isRunning = true;
 
-        int numOfClients = 20;
-        int numOfSeats = 35;
+        int numOfClients = 1000;
+        int numOfSeats = 100;
         SeatManager seatManager = new SeatManager(numOfSeats);
         Thread[] threads = new Thread[numOfClients];
 

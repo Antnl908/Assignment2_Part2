@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,8 @@ namespace Assignment2_Part2
     {
         List<Seat> seats;
         int bookedSeats;
+
+        Object lockObj = new Object();
 
         public SeatManager(int numOfSeats)
         {
@@ -35,11 +38,17 @@ namespace Assignment2_Part2
             if(seat == null)
                 return false;
 
-            if (seat.IsAvailable)
+           
+
+            lock (lockObj)
             {
-                seat.Book(client.Id);
-                return true;
+                if (seat.IsAvailable)
+                {
+                    seat.Book(client.Id);
+                    return true;
+                }
             }
+            
 
             return false;
         }
