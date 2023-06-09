@@ -74,7 +74,13 @@ namespace Assignment2_Part2
 
         public int getNumberBooked()
         {
-            throw new NotImplementedException();
+            int numberOfBookedSeats = 0;
+
+            foreach (Seat seat in seats)
+                if (seat.IsAvailable == true)
+                    numberOfBookedSeats++;
+
+            return numberOfBookedSeats;
         }
     }
 }

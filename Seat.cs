@@ -9,7 +9,7 @@ namespace Assignment2_Part2
 {
     public class Seat
     {
-        int id;
+        int id = -1;
         int clientId;
         public enum Status { available, occupied }
         public Status status = Status.available;
